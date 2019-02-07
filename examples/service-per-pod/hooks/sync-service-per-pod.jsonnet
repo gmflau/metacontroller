@@ -16,6 +16,7 @@ function(request) {
         selector: {
           [labelKey]: statefulset.metadata.name + "-" + index
         },
+        type: "LoadBalancer",
         ports: [
           {
             local parts = std.split(portnums, ":"),
